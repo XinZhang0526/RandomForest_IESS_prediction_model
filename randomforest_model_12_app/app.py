@@ -32,13 +32,13 @@ age=st.sidebar.number_input("Fp1 δ de")
 
 
 
-with open('../model/xgboost.pkl', 'rb') as f:
+with open('./model/xgboost.pkl', 'rb') as f:
     clf = joblib.load(f)
 # with open('data_max_12.pkl', 'rb') as f:
 #     data_max = pickle.load(f)
 # with open('data_min_12.pkl', 'rb') as f:
 #     data_min = pickle.load(f)
-with open('../model/xgboost_explainer.pkl', 'rb') as f:
+with open('./model/xgboost_explainer.pkl', 'rb') as f:
     explainer = joblib.load(f)
 
 
