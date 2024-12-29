@@ -1,9 +1,8 @@
-streamlit==1.27.2
-pandas==1.4.4
+pandas
 category_encoders
-shap==0.41.0
-numpy==1.23.3
-scikit-learn==1.1.2
+shap
+numpy
+scikit-learn
 matplotlib
-joblib==1.1.1
-xgboost==1.5.0
+joblib
+xgboost
