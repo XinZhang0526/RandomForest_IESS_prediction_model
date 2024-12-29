@@ -38,8 +38,8 @@ with open('xgboost.pkl', 'rb') as f:
 #     data_max = pickle.load(f)
 # with open('data_min_12.pkl', 'rb') as f:
 #     data_min = pickle.load(f)
-with open('xgboost_explainer.pkl', 'rb') as f:
-    explainer = joblib.load(f)
+# with open('xgboost_explainer.pkl', 'rb') as f:
+#     explainer = joblib.load(f)
 
 
 # If button is pressed
@@ -58,18 +58,18 @@ if st.button("Submit"):
     # Get prediction
     prediction = clf.predict(X.values)
     pred=clf.predict_proba(X.values)[0][1]
-    shap_values2 = explainer(X)
+    # shap_values2 = explainer(X)
     # Output prediction
     
     st.text(f"The probability that this patient will respond to treatment is {pred}.")
     st.set_option('deprecation.showPyplotGlobalUse', False)
-    fig = shap.plots.bar(shap_values2[0], max_display=12)
-    st.pyplot(fig)
+    # fig = shap.plots.bar(shap_values2[0], max_display=12)
+    # st.pyplot(fig)
 
-    fig = shap.force_plot(explainer.expected_value,
-                shap_values2[0].values,
-                X.iloc[0,:], matplotlib=True)
-    st.pyplot(fig)
+    # fig = shap.force_plot(explainer.expected_value,
+    #             shap_values2[0].values,
+    #             X.iloc[0,:], matplotlib=True)
+    # st.pyplot(fig)
     
     
     
