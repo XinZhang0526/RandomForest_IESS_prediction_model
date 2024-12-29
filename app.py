@@ -34,12 +34,14 @@ age=st.sidebar.number_input("Fp1 δ de")
 
 with open('xgboost.pkl', 'rb') as f:
     clf = joblib.load(f)
+    f.close()
 # with open('data_max_12.pkl', 'rb') as f:
 #     data_max = pickle.load(f)
 # with open('data_min_12.pkl', 'rb') as f:
 #     data_min = pickle.load(f)
 with open('xgboost_explainer.pkl', 'rb') as f:
     explainer = joblib.load(f)
+    f.close()
 
 
 # If button is pressed
