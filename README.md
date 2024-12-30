@@ -1,4 +1,4 @@
-# adaboost_model_12_app
+# IESS_model_12_app
 
 ## please clone the repo and start the streamlit in your local services
 ```bash
